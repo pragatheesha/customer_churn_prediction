@@ -48,7 +48,6 @@ A binary indicator identifying customers whose lifetime value is above the datas
 **Logic:**  
 High_Value_Customer = 1 if CLV > median(CLV), else 0
 
-
 **Business Rationale:**  
 This feature simplifies customer segmentation by highlighting high-value customers, enabling targeted retention strategies for customers who contribute more revenue.
 
@@ -83,7 +82,6 @@ Binary indicator identifying customers with monthly charges above the dataset av
 
 **Logic:**  
 High_Monthly_Charge = 1 if MonthlyCharges > mean(MonthlyCharges), else 0
-
 
 **Business Rationale:**  
 Pricing is a major churn driver. Customers with higher monthly charges may feel cost pressure and are more likely to churn. This feature allows the model to capture pricing sensitivity explicitly.
