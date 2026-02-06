@@ -29,8 +29,6 @@ The dataset contained missing and improperly formatted values, particularly in t
 
 This ensured that no missing values remained in the dataset after preprocessing.
 
----
-
 ## 4. Encoding Categorical Variables  
 
 Machine learning algorithms require numerical input. Multiple encoding techniques were applied to handle different types of categorical variables:
@@ -48,8 +46,6 @@ Machine learning algorithms require numerical input. Multiple encoding technique
 - Created separate binary columns for each category
 - The first category was dropped to prevent multicollinearity
 
----
-
 ## 5. Feature Scaling  
 
 Feature scaling was applied to normalize numerical variables and improve model performance.
@@ -59,8 +55,6 @@ Feature scaling was applied to normalize numerical variables and improve model p
 
 Using multiple scaling techniques ensures consistency across features with different ranges.
 
----
-
 ## 6. Outlier Detection and Handling  
 
 Outliers in `MonthlyCharges` were identified using the **Interquartile Range (IQR) method**:
@@ -69,8 +63,6 @@ Outliers in `MonthlyCharges` were identified using the **Interquartile Range (IQ
 - Values outside the range `Q1 − 1.5 × IQR` and `Q3 + 1.5 × IQR` were removed
 
 This reduced the impact of extreme values on future machine learning models.
-
----
 
 ## 7. Feature Engineering  
 
@@ -94,19 +86,13 @@ To enhance predictive power, new features were engineered from existing data:
 
 These engineered features capture customer value, behavior, and churn risk more effectively.
 
----
-
 ## 8. Feature Selection  
 
 After preprocessing, the target variable (`Churn`) was separated from the feature set. All remaining features were retained as they provide meaningful information for churn prediction.
 
----
-
 ## 9. Preprocessing Pipeline  
 
 A preprocessing pipeline was implemented using scikit-learn to ensure consistency and reproducibility. The pipeline allows the same preprocessing steps to be applied to future or unseen data during model deployment.
-
----
 
 ## 10. Final Output  
 
@@ -119,10 +105,6 @@ The final processed dataset:
 
 The cleaned and processed dataset was saved for further modeling.
 
----
-
 ## 11. Conclusion  
 
 This preprocessing workflow transformed the raw **customer_churn.csv** dataset into a structured, clean, and machine-learning-ready format. By applying systematic data cleaning, encoding, scaling, outlier handling, and feature engineering, the dataset is now well-prepared for accurate and reliable churn prediction modeling.
-
----
